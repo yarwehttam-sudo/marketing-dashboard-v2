@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slowRotate {
+  from { transform: rotate(0deg) scale(1.5); }
+  to   { transform: rotate(360deg) scale(1.5); }
+}
+
+.honeycomb-rotate {
+  animation: slowRotate 120s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes logoPulse {
+  0%   { filter: grayscale(1) brightness(0.6) drop-shadow(0 0 0px rgba(240,165,0,0)); }
+  85%  { filter: grayscale(1) brightness(0.6) drop-shadow(0 0 0px rgba(240,165,0,0)); }
+  92%  { filter: grayscale(0) brightness(1.3) drop-shadow(0 0 12px rgba(240,165,0,0.9)) sepia(1) saturate(3) hue-rotate(5deg); }
+  100% { filter: grayscale(1) brightness(0.6) drop-shadow(0 0 0px rgba(240,165,0,0)); }
+}
+
+.logo-pulse {
+  animation: logoPulse 4s ease-in-out infinite;
+}
