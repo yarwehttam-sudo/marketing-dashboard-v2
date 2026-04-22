@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-app",
+  "name": "marketing-dashboard",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,32 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mendable/firecrawl-js": "^4.18.3",
-    "@notionhq/client": "^5.19.0",
     "@types/papaparse": "^5.5.2",
-    "d3-geo": "^3.1.1",
-    "framer-motion": "^12.38.0",
     "next": "14.2.35",
     "papaparse": "^5.5.3",
     "react": "^18",
     "react-dom": "^18",
-    "recharts": "^3.8.1",
-    "resend": "^6.10.0",
-    "topojson-client": "^3.1.0",
-    "zod": "^4.3.6"
+    "recharts": "^3.8.1"
   },
   "devDependencies": {
-    "@types/d3-geo": "^3.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/topojson-client": "^3.1.5",
-    "dotenv": "^17.4.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
